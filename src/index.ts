@@ -1,6 +1,5 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
+import { applyMiddlewares } from './utils/middleware-apply';
 
 const app = express();
 const port = 3000 || process.env.PORT;
