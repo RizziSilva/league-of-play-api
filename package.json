@@ -2,8 +2,10 @@
     "name": "league-of-play-api",
     "version": "1.0.0",
     "description": "API para estudo de Typescript",
+    "author": "William Rizzi",
     "main": "dist/index.js",
     "scripts": {
+        "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
         "build": "tsc",
         "prestart": "npm run build",
         "start": "node .",

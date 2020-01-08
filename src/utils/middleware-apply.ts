@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import * as Middlewares from '../middleware';
+import Middlewares from '../middleware';
 
 export function applyMiddlewares(router: Router) {
-    for (const middleware of middlewares) {
+    for (const middleware of Middlewares) {
         middleware(router);
     }
 }
