@@ -16,9 +16,9 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src/*"
     ],
     "exclude": [
-        "src/client"
+        "node_modules"
     ]
 }
