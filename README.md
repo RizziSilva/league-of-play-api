@@ -33,7 +33,10 @@
 |  |  :: data access and manipulation
 |  |
 |  |--service
-|  |  :: services, helpers...
+|  |  :: services
+|  |
+|  |--utils
+|  |  :: helpers
 |
 ```
 
