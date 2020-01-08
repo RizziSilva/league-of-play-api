@@ -6,7 +6,7 @@
     -   [Structure](#structure)
     -   [Most Relevant Dependencies](#most-relevant-dependencies)
 
-## First Step's
+## First Steps
 
 -   Update settings.json on vscode:
     `"editor.codeActionsOnSave": { "source.fixAll.eslint": true }, "editor.formatOnSave": true, "[javascript]": { "editor.formatOnSave": true }, "[typescript]": { "editor.formatOnSave": true }`
