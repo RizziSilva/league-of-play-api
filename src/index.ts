@@ -1,15 +1,12 @@
 import './config'; //Config Environments variables.
 import express from 'express';
-import { applyMiddlewares } from './utils';
+import { applyMiddlewares, configRoutes } from './utils';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 applyMiddlewares(app);
-
-app.get('/', (req, res) => {
-    res.send(`Starting Point!`);
-});
+configRoutes(app);
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
