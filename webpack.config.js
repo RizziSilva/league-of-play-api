@@ -22,4 +22,15 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: 'bundle/',
     },
+    module: {
+        rules: [
+            {
+                test: /\.ts$|.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
+        ],
+    },
 };

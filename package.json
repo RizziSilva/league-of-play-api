@@ -5,10 +5,10 @@
     "author": "William Rizzi",
     "main": "dist/index.js",
     "scripts": {
-        "build": "tsc",
+        "build": "webpack --mode production",
         "prestart": "npm run build",
         "start": "node .",
-        "development": "webpack --mode development --watch --config ./webpack.config.js",
+        "development": "webpack --mode development --watch",
         "dev": "cross-env ENVIRONMENT=development ts-node-dev src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -28,7 +28,9 @@
         "@types/webpack": "^4.41.2",
         "@typescript-eslint/eslint-plugin": "^2.15.0",
         "@typescript-eslint/parser": "^2.15.0",
+        "babel-core": "^6.26.3",
         "babel-loader": "^8.0.6",
+        "babel-preset-env": "^1.7.0",
         "cross-env": "^6.0.3",
         "dotenv": "^8.2.0",
         "eslint": "^6.8.0",
