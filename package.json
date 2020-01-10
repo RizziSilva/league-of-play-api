@@ -8,7 +8,8 @@
         "build": "webpack --config ./webpack.config.js",
         "prestart": "npm run build",
         "start": "babel-node bundle/bundle.js",
-        "dev": "cross-env ENVIRONMENT=development npm run build && cross-env ENVIRONMENT=development nodemon --exec babel-node src/index.ts",
+        "development": "cross-env ENVIRONMENT=development ts-node-dev src/index.ts",
+        "dev": "cross-env ENVIRONMENT=development npm run build && cross-env ENVIRONMENT=development nodemon --exec babel-node --extensions '.ts' src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
@@ -20,6 +21,7 @@
         "path": "^0.12.7"
     },
     "devDependencies": {
+        "@babel/cli": "^7.7.7",
         "@babel/core": "^7.7.7",
         "@babel/node": "^7.7.7",
         "@babel/plugin-syntax-dynamic-import": "^7.7.4",
@@ -33,6 +35,7 @@
         "babel-core": "^6.26.3",
         "babel-loader": "^8.0.6",
         "babel-node": "0.0.1-security",
+        "babel-plugin-module-resolver": "^4.0.0",
         "babel-preset-env": "^1.7.0",
         "cross-env": "^6.0.3",
         "dotenv": "^8.2.0",

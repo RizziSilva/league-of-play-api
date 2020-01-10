@@ -1,18 +1,19 @@
 {
     "presets": [
+        ["@babel/preset-env"],
         [
-            "@babel/preset-env",
+            "@babel/preset-typescript",
             {
-                "targets": { "node": "current" }
+                "isTSX": true,
+                "allExtensions": true
             }
-        ],
-        "@babel/preset-typescript"
+        ]
     ],
     "plugins": [
         [
             "module-resolver",
             {
-                "root": ["./src"],
+                "root": ["."],
                 "alias": {
                     "api-controller": "./src/controller",
                     "api-utils": "./src/utils",

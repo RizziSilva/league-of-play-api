@@ -1,6 +1,6 @@
 import './config' //Config Environments variables.
 import express from 'express'
-import { applyMiddlewares, configRoutes } from './utils'
+import { applyMiddlewares, configRoutes } from 'api-utils'
 
 const app = express()
 const port = process.env.PORT || 3000

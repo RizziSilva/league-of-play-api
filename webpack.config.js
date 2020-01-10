@@ -1,5 +1,5 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
     mode: 'production',
@@ -7,8 +7,13 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts?$/,
                 use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.js?$/,
+                use: 'babel-loader',
                 exclude: /node_modules/,
             },
         ],
@@ -30,4 +35,4 @@ module.exports = {
         publicPath: 'bundle/',
     },
     externals: [nodeExternals({ whitelist: 'webpack/hot/poll?1000' })],
-};
+}
