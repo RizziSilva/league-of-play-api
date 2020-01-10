@@ -1,19 +1,26 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     target: 'node',
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
     resolve: {
         extensions: ['.ts', '.js', '.json'],
         alias: {
-            'api-config': path.resolve(__dirname, 'src/config/'),
+            'api-utils': path.resolve(__dirname, 'src/utils/'),
             'api-controller': path.resolve(__dirname, 'src/controller/'),
             'api-middleware': path.resolve(__dirname, 'src/middleware/'),
-            'api-utils': path.resolve(__dirname, 'src/utils/'),
         },
     },
-    devtool: 'inline-source-map',
     entry: {
         app: ['./src/index.ts'],
     },
@@ -22,15 +29,5 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: 'bundle/',
     },
-    module: {
-        rules: [
-            {
-                test: /\.ts$|.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                },
-            },
-        ],
-    },
+    externals: [nodeExternals({ whitelist: 'webpack/hot/poll?1000' })],
 };
