@@ -1,2 +1,2 @@
-export { applyMiddlewares } from './middleware-apply';
-export { configRoutes } from './routes-apply';
+export { applyMiddlewares } from './middleware-apply'
+export { configRoutes } from './routes-apply'

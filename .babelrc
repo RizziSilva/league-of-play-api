@@ -17,7 +17,9 @@
                 "alias": {
                     "api-controller": "./src/controller",
                     "api-utils": "./src/utils",
-                    "api-middleware": "./src/middleware"
+                    "api-middleware": "./src/middleware",
+                    "api-repository": "./src/middleware",
+                    "api-service": "./src/middleware"
                 }
             }
         ]

@@ -11,6 +11,11 @@
         "outDir": "dist",
         "baseUrl": ".",
         "paths": {
+            "api-utils": ["./src/utils/index.ts"],
+            "api-controller": ["./src/controller/index.ts"],
+            "api-middleware": ["./src/middleware/index.ts"],
+            "api-service": ["./src/service/index.ts"],
+            "api-repository": ["./src/repository/index.ts"],
             "*": ["node_modules/*"]
         }
     },

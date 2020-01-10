@@ -21,9 +21,9 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js', '.json'],
         alias: {
-            'api-utils': path.resolve(__dirname, 'src/utils/'),
-            'api-controller': path.resolve(__dirname, 'src/controller/'),
-            'api-middleware': path.resolve(__dirname, 'src/middleware/'),
+            'api-utils': path.resolve(__dirname, 'src/utils'),
+            'api-controller': path.resolve(__dirname, 'src/controller'),
+            'api-middleware': path.resolve(__dirname, 'src/middleware'),
         },
     },
     entry: {
