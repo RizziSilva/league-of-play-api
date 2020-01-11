@@ -1,3 +1,3 @@
-import { handleBodyRequestParser, handleCors } from './common';
+import { handleBodyRequestParser, handleCors } from './common'
 
-export default [handleBodyRequestParser, handleCors];
+export default [handleBodyRequestParser, handleCors]
