@@ -1,3 +1,3 @@
-import { championsController } from './champions.controller'
+import { ChampionsController } from './champions.controller'
 
-export default [championsController]
+export default [ChampionsController]
