@@ -1,14 +1,29 @@
 import './config' //Config Environments variables.
-import express from 'express'
+import express, { Application } from 'express'
 import { applyMiddlewares, configRoutes } from 'api-utils'
 
-const app = express()
-const port = process.env.PORT || 3000
+export class App {
+    app: Application
+    port: String
+    constructor() {
+        this.app = express()
+        this.port = process.env.PORT || '3000'
 
-applyMiddlewares(app)
-configRoutes(app)
+        this.initServer()
+        this.initListen()
+    }
 
-app.listen(port, () => {
-    // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${port}`)
-})
+    private initServer(): void {
+        applyMiddlewares(this.app)
+        configRoutes(this.app)
+    }
+
+    private initListen(): void {
+        this.app.listen(this.port, () => {
+            // tslint:disable-next-line:no-console
+            console.log(`server started at http://localhost:${this.port}`)
+        })
+    }
+}
+
+new App()
